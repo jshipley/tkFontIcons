@@ -1,0 +1,56 @@
+[project]
+name = "tkFontIcons"
+dynamic = ["version"]
+description = "Package popular font icons into tkinter applications."
+authors = [{name="Jeff Shipley", email="jshipley@fastmail.fm"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+
+requires-python = ">=3.8"
+keywords = ["tkinter", "icons", "font", "svg"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Code Generators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [
+    "requests==2.31.0",
+    "rich==13.7.0",
+    "tksvg==0.7.4",
+    "typer==0.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "poethepoet",
+    "pytest",
+    "ruff",
+]
+test = [
+    "pytest",
+]
+
+[project.urls]  # Optional
+"Homepage" = "https://github.com/jshipley/tkFontIcons"
+"Bug Reports" = "https://github.com/jshipley/tkFontIcons/issues"
+"Source" = "https://github.com/jshipley/tkFontIcons/"
+
+[project.scripts]
+main = "tk_font_icons.__main__:main"
+
+[build-system]
+requires = ["setuptools", "scikit-build", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "tk_font_icons.__version__"}
